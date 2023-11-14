@@ -1,0 +1,18 @@
+services:
+    ml6team-controlnet-interior-design:
+        stdin_open: true
+        tty: true
+        ports:
+            - '7860:7860'
+        platform: linux/amd64
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        -
+                            driver: nvidia
+                            count: all
+                            capabilities:
+                                - gpu
+        image: 'registry.hf.space/ml6team-controlnet-interior-design:latest'
+        command: 'streamlit run app.py'
