@@ -17,7 +17,7 @@ The demo runs on the web browser in a docker container using a GPU.
 1. Upload an image.
 2. Choose inpainting mode
 3. Mask the area to place furniture.
-4. Describe a piece of furniture to add in the prompt, e.g. 'reading chair'
+4. Describe a piece of furniture to add in the positve prompt, e.g. 'reading chair'
 5. Press generate. (Repeat until satisfied)
 6. Use the generated image as source, mask a new area, change the prompt, and generate again. Do this until you arrive at a final image.
 
@@ -25,6 +25,7 @@ The demo runs on the web browser in a docker container using a GPU.
 
 - Try not to mask the important features of the room that you want to keep (edges, windows, etc.).
 - Be descriptive and try different wordings in the prompt.
+- I did not experiment with the negative prompt, but this can probably improve the generations.
 
 In this example the baseboard and the transition between wall and floor is changed, which is not correct. It can help to make the mask smaller and keep part of the transition.
 ![problem.png](images/problem.png)
